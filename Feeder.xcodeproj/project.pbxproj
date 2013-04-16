@@ -35,19 +35,13 @@
 		AFD5FA19171CDF570071A953 /* test7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFD5FA01171CDF570071A953 /* test7.jpg */; };
 		AFD5FA1A171CDF570071A953 /* test8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFD5FA02171CDF570071A953 /* test8.jpg */; };
 		AFD5FA1B171CDF570071A953 /* test9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFD5FA03171CDF570071A953 /* test9.jpg */; };
-		AFD5FA3D171CE7B20071A953 /* NSData+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA1E171CE7B20071A953 /* NSData+NXOAuth2.m */; };
-		AFD5FA3E171CE7B20071A953 /* NSString+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA20171CE7B20071A953 /* NSString+NXOAuth2.m */; };
-		AFD5FA3F171CE7B20071A953 /* NSURL+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA22171CE7B20071A953 /* NSURL+NXOAuth2.m */; };
-		AFD5FA40171CE7B20071A953 /* NXOAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA26171CE7B20071A953 /* NXOAuth2AccessToken.m */; };
-		AFD5FA41171CE7B20071A953 /* NXOAuth2Account.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA28171CE7B20071A953 /* NXOAuth2Account.m */; };
-		AFD5FA42171CE7B20071A953 /* NXOAuth2AccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA2A171CE7B20071A953 /* NXOAuth2AccountStore.m */; };
-		AFD5FA43171CE7B20071A953 /* NXOAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA2C171CE7B20071A953 /* NXOAuth2Client.m */; };
-		AFD5FA44171CE7B20071A953 /* NXOAuth2Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA2F171CE7B20071A953 /* NXOAuth2Connection.m */; };
-		AFD5FA45171CE7B20071A953 /* NXOAuth2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA32171CE7B20071A953 /* NXOAuth2Constants.m */; };
-		AFD5FA46171CE7B20071A953 /* NXOAuth2FileStreamWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA34171CE7B20071A953 /* NXOAuth2FileStreamWrapper.m */; };
-		AFD5FA47171CE7B20071A953 /* NXOAuth2PostBodyPart.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA36171CE7B20071A953 /* NXOAuth2PostBodyPart.m */; };
-		AFD5FA48171CE7B20071A953 /* NXOAuth2PostBodyStream.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA38171CE7B20071A953 /* NXOAuth2PostBodyStream.m */; };
-		AFD5FA49171CE7B20071A953 /* NXOAuth2Request.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5FA3A171CE7B20071A953 /* NXOAuth2Request.m */; };
+		AFF2C7C8171CEAED004F1F5A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF2C7C7171CEAED004F1F5A /* Security.framework */; };
+		AFF2C7CA171CEAF4004F1F5A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF2C7C9171CEAF4004F1F5A /* SystemConfiguration.framework */; };
+		AFF2C7D5171CEDC0004F1F5A /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7CD171CEDC0004F1F5A /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFF2C7D6171CEDC0004F1F5A /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7CF171CEDC0004F1F5A /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFF2C7D7171CEDC0004F1F5A /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7D1171CEDC0004F1F5A /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFF2C7D8171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7D3171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFF2C7D9171CEDC0004F1F5A /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7D4171CEDC0004F1F5A /* GTMOAuth2ViewTouch.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,37 +87,17 @@
 		AFD5FA01171CDF570071A953 /* test7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test7.jpg; sourceTree = "<group>"; };
 		AFD5FA02171CDF570071A953 /* test8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test8.jpg; sourceTree = "<group>"; };
 		AFD5FA03171CDF570071A953 /* test9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test9.jpg; sourceTree = "<group>"; };
-		AFD5FA1D171CE7B20071A953 /* NSData+NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NXOAuth2.h"; sourceTree = "<group>"; };
-		AFD5FA1E171CE7B20071A953 /* NSData+NXOAuth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NXOAuth2.m"; sourceTree = "<group>"; };
-		AFD5FA1F171CE7B20071A953 /* NSString+NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NXOAuth2.h"; sourceTree = "<group>"; };
-		AFD5FA20171CE7B20071A953 /* NSString+NXOAuth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NXOAuth2.m"; sourceTree = "<group>"; };
-		AFD5FA21171CE7B20071A953 /* NSURL+NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+NXOAuth2.h"; sourceTree = "<group>"; };
-		AFD5FA22171CE7B20071A953 /* NSURL+NXOAuth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NXOAuth2.m"; sourceTree = "<group>"; };
-		AFD5FA24171CE7B20071A953 /* NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2.h; sourceTree = "<group>"; };
-		AFD5FA25171CE7B20071A953 /* NXOAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2AccessToken.h; sourceTree = "<group>"; };
-		AFD5FA26171CE7B20071A953 /* NXOAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2AccessToken.m; sourceTree = "<group>"; };
-		AFD5FA27171CE7B20071A953 /* NXOAuth2Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Account.h; sourceTree = "<group>"; };
-		AFD5FA28171CE7B20071A953 /* NXOAuth2Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Account.m; sourceTree = "<group>"; };
-		AFD5FA29171CE7B20071A953 /* NXOAuth2AccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2AccountStore.h; sourceTree = "<group>"; };
-		AFD5FA2A171CE7B20071A953 /* NXOAuth2AccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2AccountStore.m; sourceTree = "<group>"; };
-		AFD5FA2B171CE7B20071A953 /* NXOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Client.h; sourceTree = "<group>"; };
-		AFD5FA2C171CE7B20071A953 /* NXOAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Client.m; sourceTree = "<group>"; };
-		AFD5FA2D171CE7B20071A953 /* NXOAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2ClientDelegate.h; sourceTree = "<group>"; };
-		AFD5FA2E171CE7B20071A953 /* NXOAuth2Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Connection.h; sourceTree = "<group>"; };
-		AFD5FA2F171CE7B20071A953 /* NXOAuth2Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Connection.m; sourceTree = "<group>"; };
-		AFD5FA30171CE7B20071A953 /* NXOAuth2ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2ConnectionDelegate.h; sourceTree = "<group>"; };
-		AFD5FA31171CE7B20071A953 /* NXOAuth2Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Constants.h; sourceTree = "<group>"; };
-		AFD5FA32171CE7B20071A953 /* NXOAuth2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Constants.m; sourceTree = "<group>"; };
-		AFD5FA33171CE7B20071A953 /* NXOAuth2FileStreamWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2FileStreamWrapper.h; sourceTree = "<group>"; };
-		AFD5FA34171CE7B20071A953 /* NXOAuth2FileStreamWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2FileStreamWrapper.m; sourceTree = "<group>"; };
-		AFD5FA35171CE7B20071A953 /* NXOAuth2PostBodyPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2PostBodyPart.h; sourceTree = "<group>"; };
-		AFD5FA36171CE7B20071A953 /* NXOAuth2PostBodyPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2PostBodyPart.m; sourceTree = "<group>"; };
-		AFD5FA37171CE7B20071A953 /* NXOAuth2PostBodyStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2PostBodyStream.h; sourceTree = "<group>"; };
-		AFD5FA38171CE7B20071A953 /* NXOAuth2PostBodyStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2PostBodyStream.m; sourceTree = "<group>"; };
-		AFD5FA39171CE7B20071A953 /* NXOAuth2Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Request.h; sourceTree = "<group>"; };
-		AFD5FA3A171CE7B20071A953 /* NXOAuth2Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Request.m; sourceTree = "<group>"; };
-		AFD5FA3B171CE7B20071A953 /* NXOAuth2TrustDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2TrustDelegate.h; sourceTree = "<group>"; };
-		AFD5FA3C171CE7B20071A953 /* OAuth2Client_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2Client_Prefix.pch; sourceTree = "<group>"; };
+		AFF2C7C7171CEAED004F1F5A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AFF2C7C9171CEAF4004F1F5A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AFF2C7CC171CEDC0004F1F5A /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		AFF2C7CD171CEDC0004F1F5A /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		AFF2C7CE171CEDC0004F1F5A /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		AFF2C7CF171CEDC0004F1F5A /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		AFF2C7D0171CEDC0004F1F5A /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		AFF2C7D1171CEDC0004F1F5A /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		AFF2C7D2171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
+		AFF2C7D3171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
+		AFF2C7D4171CEDC0004F1F5A /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF2C7CA171CEAF4004F1F5A /* SystemConfiguration.framework in Frameworks */,
+				AFF2C7C8171CEAED004F1F5A /* Security.framework in Frameworks */,
 				AFB444D6171AEE2700E9A270 /* UIKit.framework in Frameworks */,
 				AFB444D8171AEE2700E9A270 /* Foundation.framework in Frameworks */,
 				AFB444DA171AEE2700E9A270 /* CoreGraphics.framework in Frameworks */,
@@ -160,6 +136,8 @@
 		AFB444D4171AEE2700E9A270 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2C7C9171CEAF4004F1F5A /* SystemConfiguration.framework */,
+				AFF2C7C7171CEAED004F1F5A /* Security.framework */,
 				AFB444D5171AEE2700E9A270 /* UIKit.framework */,
 				AFB444D7171AEE2700E9A270 /* Foundation.framework */,
 				AFB444D9171AEE2700E9A270 /* CoreGraphics.framework */,
@@ -211,7 +189,7 @@
 		AFD5F9D7171CDF570071A953 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				AFD5FA1C171CE7B20071A953 /* OAuth2Client */,
+				AFF2C7CB171CEDC0004F1F5A /* GOAuth */,
 				AFD5F9D8171CDF570071A953 /* AFNetworking */,
 			);
 			path = Shared;
@@ -349,50 +327,20 @@
 			path = Nibs;
 			sourceTree = "<group>";
 		};
-		AFD5FA1C171CE7B20071A953 /* OAuth2Client */ = {
+		AFF2C7CB171CEDC0004F1F5A /* GOAuth */ = {
 			isa = PBXGroup;
 			children = (
-				AFD5FA1D171CE7B20071A953 /* NSData+NXOAuth2.h */,
-				AFD5FA1E171CE7B20071A953 /* NSData+NXOAuth2.m */,
-				AFD5FA1F171CE7B20071A953 /* NSString+NXOAuth2.h */,
-				AFD5FA20171CE7B20071A953 /* NSString+NXOAuth2.m */,
-				AFD5FA21171CE7B20071A953 /* NSURL+NXOAuth2.h */,
-				AFD5FA22171CE7B20071A953 /* NSURL+NXOAuth2.m */,
-				AFD5FA23171CE7B20071A953 /* OAuth2Client */,
-				AFD5FA3C171CE7B20071A953 /* OAuth2Client_Prefix.pch */,
+				AFF2C7CC171CEDC0004F1F5A /* GTMHTTPFetcher.h */,
+				AFF2C7CD171CEDC0004F1F5A /* GTMHTTPFetcher.m */,
+				AFF2C7CE171CEDC0004F1F5A /* GTMOAuth2Authentication.h */,
+				AFF2C7CF171CEDC0004F1F5A /* GTMOAuth2Authentication.m */,
+				AFF2C7D0171CEDC0004F1F5A /* GTMOAuth2SignIn.h */,
+				AFF2C7D1171CEDC0004F1F5A /* GTMOAuth2SignIn.m */,
+				AFF2C7D2171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.h */,
+				AFF2C7D3171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.m */,
+				AFF2C7D4171CEDC0004F1F5A /* GTMOAuth2ViewTouch.xib */,
 			);
-			path = OAuth2Client;
-			sourceTree = "<group>";
-		};
-		AFD5FA23171CE7B20071A953 /* OAuth2Client */ = {
-			isa = PBXGroup;
-			children = (
-				AFD5FA24171CE7B20071A953 /* NXOAuth2.h */,
-				AFD5FA25171CE7B20071A953 /* NXOAuth2AccessToken.h */,
-				AFD5FA26171CE7B20071A953 /* NXOAuth2AccessToken.m */,
-				AFD5FA27171CE7B20071A953 /* NXOAuth2Account.h */,
-				AFD5FA28171CE7B20071A953 /* NXOAuth2Account.m */,
-				AFD5FA29171CE7B20071A953 /* NXOAuth2AccountStore.h */,
-				AFD5FA2A171CE7B20071A953 /* NXOAuth2AccountStore.m */,
-				AFD5FA2B171CE7B20071A953 /* NXOAuth2Client.h */,
-				AFD5FA2C171CE7B20071A953 /* NXOAuth2Client.m */,
-				AFD5FA2D171CE7B20071A953 /* NXOAuth2ClientDelegate.h */,
-				AFD5FA2E171CE7B20071A953 /* NXOAuth2Connection.h */,
-				AFD5FA2F171CE7B20071A953 /* NXOAuth2Connection.m */,
-				AFD5FA30171CE7B20071A953 /* NXOAuth2ConnectionDelegate.h */,
-				AFD5FA31171CE7B20071A953 /* NXOAuth2Constants.h */,
-				AFD5FA32171CE7B20071A953 /* NXOAuth2Constants.m */,
-				AFD5FA33171CE7B20071A953 /* NXOAuth2FileStreamWrapper.h */,
-				AFD5FA34171CE7B20071A953 /* NXOAuth2FileStreamWrapper.m */,
-				AFD5FA35171CE7B20071A953 /* NXOAuth2PostBodyPart.h */,
-				AFD5FA36171CE7B20071A953 /* NXOAuth2PostBodyPart.m */,
-				AFD5FA37171CE7B20071A953 /* NXOAuth2PostBodyStream.h */,
-				AFD5FA38171CE7B20071A953 /* NXOAuth2PostBodyStream.m */,
-				AFD5FA39171CE7B20071A953 /* NXOAuth2Request.h */,
-				AFD5FA3A171CE7B20071A953 /* NXOAuth2Request.m */,
-				AFD5FA3B171CE7B20071A953 /* NXOAuth2TrustDelegate.h */,
-			);
-			path = OAuth2Client;
+			path = GOAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +409,7 @@
 				AFD5FA19171CDF570071A953 /* test7.jpg in Resources */,
 				AFD5FA1A171CDF570071A953 /* test8.jpg in Resources */,
 				AFD5FA1B171CDF570071A953 /* test9.jpg in Resources */,
+				AFF2C7D9171CEDC0004F1F5A /* GTMOAuth2ViewTouch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,19 +431,10 @@
 				AFD5FA0C171CDF570071A953 /* AFURLConnectionOperation.m in Sources */,
 				AFD5FA0D171CDF570071A953 /* AFXMLRequestOperation.m in Sources */,
 				AFD5FA0E171CDF570071A953 /* UIImageView+AFNetworking.m in Sources */,
-				AFD5FA3D171CE7B20071A953 /* NSData+NXOAuth2.m in Sources */,
-				AFD5FA3E171CE7B20071A953 /* NSString+NXOAuth2.m in Sources */,
-				AFD5FA3F171CE7B20071A953 /* NSURL+NXOAuth2.m in Sources */,
-				AFD5FA40171CE7B20071A953 /* NXOAuth2AccessToken.m in Sources */,
-				AFD5FA41171CE7B20071A953 /* NXOAuth2Account.m in Sources */,
-				AFD5FA42171CE7B20071A953 /* NXOAuth2AccountStore.m in Sources */,
-				AFD5FA43171CE7B20071A953 /* NXOAuth2Client.m in Sources */,
-				AFD5FA44171CE7B20071A953 /* NXOAuth2Connection.m in Sources */,
-				AFD5FA45171CE7B20071A953 /* NXOAuth2Constants.m in Sources */,
-				AFD5FA46171CE7B20071A953 /* NXOAuth2FileStreamWrapper.m in Sources */,
-				AFD5FA47171CE7B20071A953 /* NXOAuth2PostBodyPart.m in Sources */,
-				AFD5FA48171CE7B20071A953 /* NXOAuth2PostBodyStream.m in Sources */,
-				AFD5FA49171CE7B20071A953 /* NXOAuth2Request.m in Sources */,
+				AFF2C7D5171CEDC0004F1F5A /* GTMHTTPFetcher.m in Sources */,
+				AFF2C7D6171CEDC0004F1F5A /* GTMOAuth2Authentication.m in Sources */,
+				AFF2C7D7171CEDC0004F1F5A /* GTMOAuth2SignIn.m in Sources */,
+				AFF2C7D8171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Feeder/Feeder-Prefix.pch";
 				INFOPLIST_FILE = "Feeder/Feeder-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -591,6 +532,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Feeder/Feeder-Prefix.pch";
 				INFOPLIST_FILE = "Feeder/Feeder-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
