@@ -48,6 +48,7 @@
 		AFF2C7E4171D8550004F1F5A /* google_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7DE171D8550004F1F5A /* google_icon@2x.png */; };
 		AFF2C7E5171D8550004F1F5A /* twitter_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7DF171D8550004F1F5A /* twitter_icon.png */; };
 		AFF2C7E6171D8550004F1F5A /* twitter_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7E0171D8550004F1F5A /* twitter_icon@2x.png */; };
+		AFF2C7E8171E6251004F1F5A /* FeederTestLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7E7171E6251004F1F5A /* FeederTestLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		AFF2C7DE171D8550004F1F5A /* google_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google_icon@2x.png"; sourceTree = "<group>"; };
 		AFF2C7DF171D8550004F1F5A /* twitter_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_icon.png; sourceTree = "<group>"; };
 		AFF2C7E0171D8550004F1F5A /* twitter_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter_icon@2x.png"; sourceTree = "<group>"; };
+		AFF2C7E7171E6251004F1F5A /* FeederTestLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeederTestLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +361,7 @@
 		AFF2C7DA171D8550004F1F5A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2C7E7171E6251004F1F5A /* FeederTestLogo.png */,
 				AFF2C7DB171D8550004F1F5A /* facebook_icon.png */,
 				AFF2C7DC171D8550004F1F5A /* facebook_icon@2x.png */,
 				AFF2C7DD171D8550004F1F5A /* google_icon.png */,
@@ -442,6 +445,7 @@
 				AFF2C7E4171D8550004F1F5A /* google_icon@2x.png in Resources */,
 				AFF2C7E5171D8550004F1F5A /* twitter_icon.png in Resources */,
 				AFF2C7E6171D8550004F1F5A /* twitter_icon@2x.png in Resources */,
+				AFF2C7E8171E6251004F1F5A /* FeederTestLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
