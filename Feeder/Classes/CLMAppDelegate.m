@@ -7,13 +7,24 @@
 //
 
 #import "CLMAppDelegate.h"
+#import "CLMApplicationViewController.h"
 
 @implementation CLMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    CLMApplicationViewController *rootViewController = [[CLMApplicationViewController alloc] init];
+    
+    [rootViewController setLaunchBlock:^(void)
+    {
+        
+    }];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    [self.window setRootViewController:rootViewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

@@ -49,6 +49,9 @@
 		AFF2C7E5171D8550004F1F5A /* twitter_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7DF171D8550004F1F5A /* twitter_icon.png */; };
 		AFF2C7E6171D8550004F1F5A /* twitter_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7E0171D8550004F1F5A /* twitter_icon@2x.png */; };
 		AFF2C7E8171E6251004F1F5A /* FeederTestLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7E7171E6251004F1F5A /* FeederTestLogo.png */; };
+		AFF2C7EB171E6283004F1F5A /* CLMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7EA171E6283004F1F5A /* CLMLoginViewController.m */; };
+		AFF2C7EE171E62A7004F1F5A /* CLMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7ED171E62A7004F1F5A /* CLMLoginViewController.xib */; };
+		AFF2C7F1171E635E004F1F5A /* CLMApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7F0171E635E004F1F5A /* CLMApplicationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +115,11 @@
 		AFF2C7DF171D8550004F1F5A /* twitter_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_icon.png; sourceTree = "<group>"; };
 		AFF2C7E0171D8550004F1F5A /* twitter_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter_icon@2x.png"; sourceTree = "<group>"; };
 		AFF2C7E7171E6251004F1F5A /* FeederTestLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeederTestLogo.png; sourceTree = "<group>"; };
+		AFF2C7E9171E6283004F1F5A /* CLMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMLoginViewController.h; sourceTree = "<group>"; };
+		AFF2C7EA171E6283004F1F5A /* CLMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMLoginViewController.m; sourceTree = "<group>"; };
+		AFF2C7ED171E62A7004F1F5A /* CLMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLMLoginViewController.xib; sourceTree = "<group>"; };
+		AFF2C7EF171E635E004F1F5A /* CLMApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMApplicationViewController.h; sourceTree = "<group>"; };
+		AFF2C7F0171E635E004F1F5A /* CLMApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMApplicationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +256,8 @@
 		AFD5F9ED171CDF570071A953 /* ApplicationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2C7EF171E635E004F1F5A /* CLMApplicationViewController.h */,
+				AFF2C7F0171E635E004F1F5A /* CLMApplicationViewController.m */,
 			);
 			path = ApplicationViewController;
 			sourceTree = "<group>";
@@ -255,6 +265,8 @@
 		AFD5F9EE171CDF570071A953 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2C7E9171E6283004F1F5A /* CLMLoginViewController.h */,
+				AFF2C7EA171E6283004F1F5A /* CLMLoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -338,6 +350,7 @@
 		AFD5FA04171CDF570071A953 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2C7EC171E6298004F1F5A /* Login */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -370,6 +383,14 @@
 				AFF2C7E0171D8550004F1F5A /* twitter_icon@2x.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		AFF2C7EC171E6298004F1F5A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AFF2C7ED171E62A7004F1F5A /* CLMLoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +467,7 @@
 				AFF2C7E5171D8550004F1F5A /* twitter_icon.png in Resources */,
 				AFF2C7E6171D8550004F1F5A /* twitter_icon@2x.png in Resources */,
 				AFF2C7E8171E6251004F1F5A /* FeederTestLogo.png in Resources */,
+				AFF2C7EE171E62A7004F1F5A /* CLMLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +493,8 @@
 				AFF2C7D6171CEDC0004F1F5A /* GTMOAuth2Authentication.m in Sources */,
 				AFF2C7D7171CEDC0004F1F5A /* GTMOAuth2SignIn.m in Sources */,
 				AFF2C7D8171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.m in Sources */,
+				AFF2C7EB171E6283004F1F5A /* CLMLoginViewController.m in Sources */,
+				AFF2C7F1171E635E004F1F5A /* CLMApplicationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
