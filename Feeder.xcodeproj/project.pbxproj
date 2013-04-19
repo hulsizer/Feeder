@@ -54,6 +54,8 @@
 		AFF2C7EB171E6283004F1F5A /* CLMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7EA171E6283004F1F5A /* CLMLoginViewController.m */; };
 		AFF2C7EE171E62A7004F1F5A /* CLMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7ED171E62A7004F1F5A /* CLMLoginViewController.xib */; };
 		AFF2C7F1171E635E004F1F5A /* CLMApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7F0171E635E004F1F5A /* CLMApplicationViewController.m */; };
+		AFF2C7F31720D3F7004F1F5A /* FeederTestSplash.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2C7F21720D3F7004F1F5A /* FeederTestSplash.png */; };
+		AFF2C7F51720D5F7004F1F5A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF2C7F41720D5F7004F1F5A /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,8 @@
 		AFF2C7ED171E62A7004F1F5A /* CLMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLMLoginViewController.xib; sourceTree = "<group>"; };
 		AFF2C7EF171E635E004F1F5A /* CLMApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMApplicationViewController.h; sourceTree = "<group>"; };
 		AFF2C7F0171E635E004F1F5A /* CLMApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMApplicationViewController.m; sourceTree = "<group>"; };
+		AFF2C7F21720D3F7004F1F5A /* FeederTestSplash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeederTestSplash.png; sourceTree = "<group>"; };
+		AFF2C7F41720D5F7004F1F5A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF2C7F51720D5F7004F1F5A /* CoreImage.framework in Frameworks */,
 				52AAD213171EF79B00947FB0 /* QuartzCore.framework in Frameworks */,
 				AFF2C7CA171CEAF4004F1F5A /* SystemConfiguration.framework in Frameworks */,
 				AFF2C7C8171CEAED004F1F5A /* Security.framework in Frameworks */,
@@ -163,6 +168,7 @@
 		AFB444D4171AEE2700E9A270 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2C7F41720D5F7004F1F5A /* CoreImage.framework */,
 				52AAD212171EF79B00947FB0 /* QuartzCore.framework */,
 				AFF2C7C9171CEAF4004F1F5A /* SystemConfiguration.framework */,
 				AFF2C7C7171CEAED004F1F5A /* Security.framework */,
@@ -380,6 +386,7 @@
 		AFF2C7DA171D8550004F1F5A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				AFF2C7F21720D3F7004F1F5A /* FeederTestSplash.png */,
 				52AAD214171F016B00947FB0 /* FeederTest.png */,
 				AFF2C7E7171E6251004F1F5A /* FeederTestLogo.png */,
 				AFF2C7DB171D8550004F1F5A /* facebook_icon.png */,
@@ -476,6 +483,7 @@
 				AFF2C7E8171E6251004F1F5A /* FeederTestLogo.png in Resources */,
 				AFF2C7EE171E62A7004F1F5A /* CLMLoginViewController.xib in Resources */,
 				52AAD215171F016C00947FB0 /* FeederTest.png in Resources */,
+				AFF2C7F31720D3F7004F1F5A /* FeederTestSplash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
