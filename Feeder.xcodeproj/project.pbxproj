@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52990DF717247CBD00285E42 /* CLMOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52990DF617247CBD00285E42 /* CLMOAuthClient.m */; };
+		52990DFB17247D7200285E42 /* CLMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 52990DFA17247D7200285E42 /* CLMConstants.m */; };
+		52990DFF1724853D00285E42 /* AFOAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 52990DFE1724853D00285E42 /* AFOAuth2Client.m */; };
 		52AAD213171EF79B00947FB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AAD212171EF79B00947FB0 /* QuartzCore.framework */; };
 		52AAD215171F016C00947FB0 /* FeederTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AAD214171F016B00947FB0 /* FeederTest.png */; };
 		AFB444D6171AEE2700E9A270 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB444D5171AEE2700E9A270 /* UIKit.framework */; };
@@ -59,6 +62,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52990DF517247CBD00285E42 /* CLMOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMOAuthClient.h; sourceTree = "<group>"; };
+		52990DF617247CBD00285E42 /* CLMOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMOAuthClient.m; sourceTree = "<group>"; };
+		52990DF917247D7200285E42 /* CLMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMConstants.h; sourceTree = "<group>"; };
+		52990DFA17247D7200285E42 /* CLMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMConstants.m; sourceTree = "<group>"; };
+		52990DFD1724853D00285E42 /* AFOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth2Client.h; sourceTree = "<group>"; };
+		52990DFE1724853D00285E42 /* AFOAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth2Client.m; sourceTree = "<group>"; };
 		52AAD212171EF79B00947FB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52AAD214171F016B00947FB0 /* FeederTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeederTest.png; sourceTree = "<group>"; };
 		AFB444D2171AEE2700E9A270 /* Feeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +157,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52990DF117247C7700285E42 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				52990DF217247C7700285E42 /* OAuth */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		52990DF217247C7700285E42 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				52990DF517247CBD00285E42 /* CLMOAuthClient.h */,
+				52990DF617247CBD00285E42 /* CLMOAuthClient.m */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		52990DF317247C9600285E42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52990DF417247C9700285E42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52990DF817247D6300285E42 /* Utitlities */ = {
+			isa = PBXGroup;
+			children = (
+				52990DF917247D7200285E42 /* CLMConstants.h */,
+				52990DFA17247D7200285E42 /* CLMConstants.m */,
+			);
+			path = Utitlities;
+			sourceTree = "<group>";
+		};
+		52990DFC1724853D00285E42 /* AFOAuth2Client */ = {
+			isa = PBXGroup;
+			children = (
+				52990DFD1724853D00285E42 /* AFOAuth2Client.h */,
+				52990DFE1724853D00285E42 /* AFOAuth2Client.m */,
+			);
+			path = AFOAuth2Client;
+			sourceTree = "<group>";
+		};
 		AFB444C9171AEE2700E9A270 = {
 			isa = PBXGroup;
 			children = (
@@ -203,21 +261,16 @@
 		AFD5F9D3171CDF570071A953 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				52990DF817247D6300285E42 /* Utitlities */,
+				52990DF317247C9600285E42 /* Models */,
+				52990DF417247C9700285E42 /* Views */,
+				52990DF117247C7700285E42 /* Networking */,
 				AFD5F9D4171CDF570071A953 /* CLMAppDelegate.h */,
 				AFD5F9D5171CDF570071A953 /* CLMAppDelegate.m */,
-				AFD5F9D6171CDF570071A953 /* Model */,
 				AFD5F9D7171CDF570071A953 /* Shared */,
 				AFD5F9EC171CDF570071A953 /* ViewControllers */,
-				AFD5F9F0171CDF570071A953 /* Views */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		AFD5F9D6171CDF570071A953 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		AFD5F9D7171CDF570071A953 /* Shared */ = {
@@ -232,6 +285,7 @@
 		AFD5F9D8171CDF570071A953 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				52990DFC1724853D00285E42 /* AFOAuth2Client */,
 				AFD5F9D9171CDF570071A953 /* AFHTTPClient.h */,
 				AFD5F9DA171CDF570071A953 /* AFHTTPClient.m */,
 				AFD5F9DB171CDF570071A953 /* AFHTTPRequestOperation.h */,
@@ -288,13 +342,6 @@
 			children = (
 			);
 			path = SplashScreen;
-			sourceTree = "<group>";
-		};
-		AFD5F9F0171CDF570071A953 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		AFD5F9F1171CDF570071A953 /* Resources */ = {
@@ -511,6 +558,9 @@
 				AFF2C7D8171CEDC0004F1F5A /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				AFF2C7EB171E6283004F1F5A /* CLMLoginViewController.m in Sources */,
 				AFF2C7F1171E635E004F1F5A /* CLMApplicationViewController.m in Sources */,
+				52990DF717247CBD00285E42 /* CLMOAuthClient.m in Sources */,
+				52990DFB17247D7200285E42 /* CLMConstants.m in Sources */,
+				52990DFF1724853D00285E42 /* AFOAuth2Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

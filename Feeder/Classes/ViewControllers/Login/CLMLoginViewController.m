@@ -7,6 +7,11 @@
 //
 
 #import "CLMLoginViewController.h"
+#import "AFOAuth2Client.h"
+#import "AFJSONRequestOperation.h"
+
+#import "CLMConstants.h"
+
 #import <QuartzCore/QuartzCore.h>
 @interface CLMLoginViewController ()
 
@@ -232,5 +237,20 @@
     return animation;
 }
 
+#pragma mark - OAuthLogin
 
+- (IBAction)facebookLogin:(id)sender
+{
+	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+	
+	NSURL *url = [NSURL URLWithString:@"https://www.facebook.com"];
+	AFOAuth2Client *oauthClient = [AFOAuth2Client clientWithBaseURL:url clientID:FacebookClientID secret:FacebookClientSecret];
+	
+	[oauthClient authenticateUsingOAuthWithPath:@"/dialog/oauth" username:@"andrew.hulsizer@gmail.com" password:@"Boomer-1989" scope:@"" success:^(AFOAuthCredential *credential) {
+		NSLog(@"I have a token! %@", credential.accessToken);
+		[AFOAuthCredential storeCredential:credential withIdentifier:oauthClient.serviceProviderIdentifier];
+	} failure:^(NSError *error) {
+		NSLog(@"Error: %@", error);
+	}];
+}
 @end
