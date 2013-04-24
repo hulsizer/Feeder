@@ -9,7 +9,7 @@
 #import "CLMLoginViewController.h"
 #import "AFOAuth2Client.h"
 #import "AFJSONRequestOperation.h"
-
+#import "CLMOAuthClient.h"
 #import "CLMConstants.h"
 
 #import <QuartzCore/QuartzCore.h>
@@ -25,6 +25,9 @@
 @property (nonatomic, strong) IBOutlet UIView *loginView;
 @property (nonatomic, strong) CAShapeLayer *maskLayer;
 @property (nonatomic, assign) BOOL isMaskOpen;
+
+@property (nonatomic, strong) UIWebView *loginWebView;
+@property (nonatomic, strong) CLMOAuthClient *client;
 
 - (IBAction)login:(id)sender;
 @end
@@ -241,16 +244,9 @@
 
 - (IBAction)facebookLogin:(id)sender
 {
-	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
-	
-	NSURL *url = [NSURL URLWithString:@"https://www.facebook.com"];
-	AFOAuth2Client *oauthClient = [AFOAuth2Client clientWithBaseURL:url clientID:FacebookClientID secret:FacebookClientSecret];
-	
-	[oauthClient authenticateUsingOAuthWithPath:@"/dialog/oauth" username:@"andrew.hulsizer@gmail.com" password:@"Boomer-1989" scope:@"" success:^(AFOAuthCredential *credential) {
-		NSLog(@"I have a token! %@", credential.accessToken);
-		[AFOAuthCredential storeCredential:credential withIdentifier:oauthClient.serviceProviderIdentifier];
-	} failure:^(NSError *error) {
-		NSLog(@"Error: %@", error);
-	}];
+    self.loginWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.loginWebView];
+    self.client = [CLMOAuthClient clientWithBaseURL:[NSURL URLWithString:@"https://accounts.google.com/"] clientID:GoogleClientID clientSecret:GoogleClientSecret redirectURL:[NSURL URLWithString:@"http://feeder.com/oauth"]];
+    [self.client requestAuthorizationInWebView:self.loginWebView];
 }
 @end

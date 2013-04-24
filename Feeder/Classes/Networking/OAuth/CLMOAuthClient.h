@@ -6,12 +6,19 @@
 //  Copyright (c) 2013 Andrew Hulsizer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "AFHTTPClient.h"
 
-@interface CLMOAuthClient : NSObject
+@interface CLMOAuthClient : AFHTTPClient
 
-- (id)initWithAppID:(NSString*)appID secret:(NSString*)secret redirectURL:(NSURL*)redirectURL;
++ (instancetype)clientWithBaseURL:(NSURL *)baseURL
+                         clientID:(NSString *)clientID
+                     clientSecret:(NSString *)clientSecret
+                      redirectURL:(NSURL *)redirectURL;
 
-- (void)requestAuthorization;
+- (id)initWithBaseURL:(NSURL *)baseURL
+             clientID:(NSString *)clientID
+         clientSecret:(NSString *)clientSecret
+          redirectURL:(NSURL *)redirectURL;
 
+- (void)requestAuthorizationInWebView:(UIWebView *)webView;
 @end

@@ -17,6 +17,10 @@
 		AFB444DA171AEE2700E9A270 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB444D9171AEE2700E9A270 /* CoreGraphics.framework */; };
 		AFB444E0171AEE2700E9A270 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFB444DE171AEE2700E9A270 /* InfoPlist.strings */; };
 		AFB444E2171AEE2700E9A270 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB444E1171AEE2700E9A270 /* main.m */; };
+		AFCDEE7F1726308B00729D6C /* CLMAuthCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDEE7E1726308B00729D6C /* CLMAuthCredential.m */; };
+		AFCDEE871727834100729D6C /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDEE821727834100729D6C /* NSDictionary+QueryString.m */; };
+		AFCDEE881727834100729D6C /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDEE841727834100729D6C /* NSString+QueryString.m */; };
+		AFCDEE891727834100729D6C /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDEE861727834100729D6C /* NSURL+QueryInspector.m */; };
 		AFD5FA05171CDF570071A953 /* CLMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5F9D5171CDF570071A953 /* CLMAppDelegate.m */; };
 		AFD5FA06171CDF570071A953 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5F9DA171CDF570071A953 /* AFHTTPClient.m */; };
 		AFD5FA07171CDF570071A953 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5F9DC171CDF570071A953 /* AFHTTPRequestOperation.m */; };
@@ -78,6 +82,14 @@
 		AFB444DF171AEE2700E9A270 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AFB444E1171AEE2700E9A270 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFB444E3171AEE2700E9A270 /* Feeder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Feeder-Prefix.pch"; sourceTree = "<group>"; };
+		AFCDEE7D1726308B00729D6C /* CLMAuthCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMAuthCredential.h; sourceTree = "<group>"; };
+		AFCDEE7E1726308B00729D6C /* CLMAuthCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMAuthCredential.m; sourceTree = "<group>"; };
+		AFCDEE811727834100729D6C /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
+		AFCDEE821727834100729D6C /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
+		AFCDEE831727834100729D6C /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
+		AFCDEE841727834100729D6C /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
+		AFCDEE851727834100729D6C /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
+		AFCDEE861727834100729D6C /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
 		AFD5F9D4171CDF570071A953 /* CLMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMAppDelegate.h; sourceTree = "<group>"; };
 		AFD5F9D5171CDF570071A953 /* CLMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMAppDelegate.m; sourceTree = "<group>"; };
 		AFD5F9D9171CDF570071A953 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -170,6 +182,9 @@
 			children = (
 				52990DF517247CBD00285E42 /* CLMOAuthClient.h */,
 				52990DF617247CBD00285E42 /* CLMOAuthClient.m */,
+				AFCDEE7D1726308B00729D6C /* CLMAuthCredential.h */,
+				AFCDEE7E1726308B00729D6C /* CLMAuthCredential.m */,
+				AFCDEE801727834100729D6C /* Categories */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -256,6 +271,19 @@
 				AFB444E3171AEE2700E9A270 /* Feeder-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFCDEE801727834100729D6C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AFCDEE811727834100729D6C /* NSDictionary+QueryString.h */,
+				AFCDEE821727834100729D6C /* NSDictionary+QueryString.m */,
+				AFCDEE831727834100729D6C /* NSString+QueryString.h */,
+				AFCDEE841727834100729D6C /* NSString+QueryString.m */,
+				AFCDEE851727834100729D6C /* NSURL+QueryInspector.h */,
+				AFCDEE861727834100729D6C /* NSURL+QueryInspector.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		AFD5F9D3171CDF570071A953 /* Classes */ = {
@@ -561,6 +589,10 @@
 				52990DF717247CBD00285E42 /* CLMOAuthClient.m in Sources */,
 				52990DFB17247D7200285E42 /* CLMConstants.m in Sources */,
 				52990DFF1724853D00285E42 /* AFOAuth2Client.m in Sources */,
+				AFCDEE7F1726308B00729D6C /* CLMAuthCredential.m in Sources */,
+				AFCDEE871727834100729D6C /* NSDictionary+QueryString.m in Sources */,
+				AFCDEE881727834100729D6C /* NSString+QueryString.m in Sources */,
+				AFCDEE891727834100729D6C /* NSURL+QueryInspector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
