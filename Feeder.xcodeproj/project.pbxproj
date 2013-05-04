@@ -44,6 +44,8 @@
 		AFD5FA19171CDF570071A953 /* test7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFD5FA01171CDF570071A953 /* test7.jpg */; };
 		AFD5FA1A171CDF570071A953 /* test8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFD5FA02171CDF570071A953 /* test8.jpg */; };
 		AFD5FA1B171CDF570071A953 /* test9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFD5FA03171CDF570071A953 /* test9.jpg */; };
+		AFD60D5E1734BF2400FED2DC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD60D5D1734BF2400FED2DC /* Social.framework */; };
+		AFD60D601734BFE400FED2DC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD60D5F1734BFE400FED2DC /* Accounts.framework */; };
 		AFF2C7C8171CEAED004F1F5A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF2C7C7171CEAED004F1F5A /* Security.framework */; };
 		AFF2C7CA171CEAF4004F1F5A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF2C7C9171CEAF4004F1F5A /* SystemConfiguration.framework */; };
 		AFF2C7D5171CEDC0004F1F5A /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF2C7CD171CEDC0004F1F5A /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -124,6 +126,8 @@
 		AFD5FA01171CDF570071A953 /* test7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test7.jpg; sourceTree = "<group>"; };
 		AFD5FA02171CDF570071A953 /* test8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test8.jpg; sourceTree = "<group>"; };
 		AFD5FA03171CDF570071A953 /* test9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test9.jpg; sourceTree = "<group>"; };
+		AFD60D5D1734BF2400FED2DC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AFD60D5F1734BFE400FED2DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		AFF2C7C7171CEAED004F1F5A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AFF2C7C9171CEAF4004F1F5A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AFF2C7CC171CEDC0004F1F5A /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD60D601734BFE400FED2DC /* Accounts.framework in Frameworks */,
+				AFD60D5E1734BF2400FED2DC /* Social.framework in Frameworks */,
 				AFF2C7F51720D5F7004F1F5A /* CoreImage.framework in Frameworks */,
 				52AAD213171EF79B00947FB0 /* QuartzCore.framework in Frameworks */,
 				AFF2C7CA171CEAF4004F1F5A /* SystemConfiguration.framework in Frameworks */,
@@ -241,6 +247,8 @@
 		AFB444D4171AEE2700E9A270 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFD60D5F1734BFE400FED2DC /* Accounts.framework */,
+				AFD60D5D1734BF2400FED2DC /* Social.framework */,
 				AFF2C7F41720D5F7004F1F5A /* CoreImage.framework */,
 				52AAD212171EF79B00947FB0 /* QuartzCore.framework */,
 				AFF2C7C9171CEAF4004F1F5A /* SystemConfiguration.framework */,

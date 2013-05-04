@@ -11,6 +11,7 @@
 #import "AFJSONRequestOperation.h"
 #import "CLMOAuthClient.h"
 #import "CLMConstants.h"
+#import <Accounts/Accounts.h>
 
 #import <QuartzCore/QuartzCore.h>
 @interface CLMLoginViewController ()
@@ -244,9 +245,51 @@
 
 - (IBAction)facebookLogin:(id)sender
 {
-    self.loginWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.loginWebView];
-    self.client = [CLMOAuthClient clientWithBaseURL:[NSURL URLWithString:@"https://accounts.google.com/"] clientID:GoogleClientID clientSecret:GoogleClientSecret redirectURL:[NSURL URLWithString:@"http://feeder.com/oauth"]];
-    [self.client requestAuthorizationInWebView:self.loginWebView];
+    [self getTwitter];
+    [self getFacebook];
+//    self.loginWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    [self.view addSubview:self.loginWebView];
+//    self.client = [CLMOAuthClient clientWithBaseURL:[NSURL URLWithString:@"https://accounts.google.com/"] clientID:GoogleClientID clientSecret:GoogleClientSecret redirectURL:[NSURL URLWithString:@"http://feeder.com/oauth"]];
+//    [self.client requestAuthorizationInWebView:self.loginWebView];
+}
+
+- (void)getTwitter
+{
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    
+    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+        if(granted) {
+            NSArray *accountsArray = [accountStore accountsWithAccountType:accountType];
+            
+            if ([accountsArray count] > 0) {
+                ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
+                NSLog(@"%@",twitterAccount.username);
+                NSLog(@"%@",twitterAccount.identifier);
+            }
+        }
+    }];
+}
+
+- (void)getFacebook
+{
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *facebookTypeAccount = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
+    
+    [accountStore requestAccessToAccountsWithType:facebookTypeAccount
+                                           options:@{ACFacebookAppIdKey: FacebookClientID, ACFacebookPermissionsKey: @[@"email"]}
+                                        completion:^(BOOL granted, NSError *error) {
+                                            if(granted){
+                                                NSArray *accounts = [accountStore accountsWithAccountType:facebookTypeAccount];
+                                                ACAccount *facebookAccount = [accounts lastObject];
+                                                NSLog(@"Success");
+                                                NSLog(@"%@",facebookAccount.identifier);
+                                    
+                                            }else{
+                                                // ouch
+                                                NSLog(@"Fail");
+                                                NSLog(@"Error: %@", error);
+                                            }
+                                        }];
 }
 @end
