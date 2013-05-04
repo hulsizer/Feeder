@@ -12,6 +12,7 @@
 #import "CLMOAuthClient.h"
 #import "CLMConstants.h"
 #import <Accounts/Accounts.h>
+#import <Social/Social.h>
 
 #import <QuartzCore/QuartzCore.h>
 @interface CLMLoginViewController ()
@@ -266,6 +267,8 @@
                 ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
                 NSLog(@"%@",twitterAccount.username);
                 NSLog(@"%@",twitterAccount.identifier);
+                
+                [self twitterMe:twitterAccount];
             }
         }
     }];
@@ -284,12 +287,48 @@
                                                 ACAccount *facebookAccount = [accounts lastObject];
                                                 NSLog(@"Success");
                                                 NSLog(@"%@",facebookAccount.identifier);
-                                    
+                                                [self me:facebookAccount];
                                             }else{
                                                 // ouch
                                                 NSLog(@"Fail");
                                                 NSLog(@"Error: %@", error);
                                             }
                                         }];
+}
+
+- (void)me:(ACAccount *)account{
+    NSURL *meurl = [NSURL URLWithString:@"https://graph.facebook.com/me"];
+    
+    SLRequest *merequest = [SLRequest requestForServiceType:SLServiceTypeFacebook
+                                              requestMethod:SLRequestMethodGET
+                                                        URL:meurl
+                                                 parameters:nil];
+    
+    merequest.account = account;
+    
+    [merequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        NSString *meDataString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"%@", meDataString);
+        
+    }];
+    
+}
+
+- (void)twitterMe:(ACAccount *)account{
+    NSURL *meurl = [NSURL URLWithString:[@"https://api.twitter.com/1/users/show.json?screen_name=" stringByAppendingString:account.username]];
+    
+    SLRequest *merequest = [SLRequest requestForServiceType:SLServiceTypeTwitter
+                                              requestMethod:SLRequestMethodGET
+                                                        URL:meurl
+                                                 parameters:nil];
+    
+    [merequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        NSString *meDataString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"%@", meDataString);
+        
+    }];
+    
 }
 @end
