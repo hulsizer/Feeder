@@ -23,6 +23,11 @@
 
 @implementation CLMOAuthClient 
 
+- (NSString *)requestPath
+{
+    return @"";
+}
+
 + (instancetype)clientWithBaseURL:(NSURL *)baseURL
                          clientID:(NSString *)clientID
                      clientSecret:(NSString *)clientSecret
@@ -60,7 +65,7 @@
             [params setValue:[additionalParameters valueForKey:key] forKey:key];
         }
     }
-    NSURL *fullURL = [NSURL URLWithString:[[[self.baseURL absoluteString] stringByAppendingPathComponent:@"o/oauth2/auth"] stringByAppendingFormat:@"?%@", [params stringWithFormEncodedComponents]]];
+    NSURL *fullURL = [NSURL URLWithString:[[[self.baseURL absoluteString] stringByAppendingPathComponent:[self requestPath]] stringByAppendingFormat:@"?%@", [params stringWithFormEncodedComponents]]];
     NSMutableURLRequest *authRequest = [NSMutableURLRequest requestWithURL:fullURL];
     [authRequest setHTTPMethod:@"GET"];
     
@@ -138,7 +143,7 @@
 
 - (void)extractCredentialsFromResponse:(NSDictionary*)response
 {
-    [self verifyAuthorizationWithAccessCode:@"o/oauth2/token" parameters:response success:^(CLMAuthCredential *credential) {
+    [self verifyAuthorizationWithAccessCode:@"oauth/access_token" parameters:response success:^(CLMAuthCredential *credential) {
         
         
     } failure:^(NSError *error) {

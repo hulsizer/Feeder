@@ -14,3 +14,6 @@ extern NSString * const FacebookOAuthURL;
 
 extern NSString * const GoogleClientID;
 extern NSString * const GoogleClientSecret;
+
+extern NSString * const TwitterClientID;
+extern NSString * const TwitterClientSecret;
