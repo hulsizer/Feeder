@@ -10,4 +10,6 @@
 
 @interface CLMUser : NSObject
 
+@property (nonatomic, readonly) NSString *userID;
+@property (nonatomic, readonly) NSArray *feedURLs;
 @end

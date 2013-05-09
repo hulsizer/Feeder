@@ -8,6 +8,13 @@
 
 #import "CLMUser.h"
 
+@interface CLMUser ()
+
+@property (nonatomic, strong) NSString *userID;
+@property (nonatomic, strong) NSArray *feedURLs;
+
+@end
+
 @implementation CLMUser
 
 @end

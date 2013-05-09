@@ -8,10 +8,13 @@
 
 #import "CLMApplicationViewController.h"
 #import "CLMLoginViewController.h"
+#import "CLMFeaturedViewController.h"
+#import "CLMConstants.h"
 
 @interface CLMApplicationViewController ()
 
 @property (nonatomic, strong) CLMLoginViewController *loginViewController;
+@property (nonatomic, strong) CLMFeaturedViewController *featuredViewController;
 @end
 
 @implementation CLMApplicationViewController
@@ -32,6 +35,9 @@
     
     self.launchBlock();
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLogin:) name:CLMUserAccountLoginNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLogout:) name:CLMUserAccountLogoutNotification object:nil];
+    
     self.loginViewController = [[CLMLoginViewController alloc] init];
     [self.view addSubview:self.loginViewController.view];
 }
@@ -42,4 +48,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Lazy Loaders
+
+- (CLMFeaturedViewController *)featuredViewController
+{
+    if (!_featuredViewController)
+    {
+        _featuredViewController = [[CLMFeaturedViewController alloc] init];
+    }
+    
+    return _featuredViewController;
+}
+
+- (void)handleLogin:(NSNotification *)notification
+{
+    //[self.view insertSubview:self.featuredViewController.view atIndex:0];
+    [self.loginViewController.view removeFromSuperview];
+    [self.loginViewController.view setAlpha:0.0];
+    //[self.loginViewController removeFromParentViewController];
+}
+
+- (void)handleLogout:(NSNotification *)notification
+{
+    [self.view addSubview:self.loginViewController.view];    
+}
 @end

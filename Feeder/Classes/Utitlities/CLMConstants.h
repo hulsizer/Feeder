@@ -17,3 +17,7 @@ extern NSString * const GoogleClientSecret;
 
 extern NSString * const TwitterClientID;
 extern NSString * const TwitterClientSecret;
+
+//Notifications
+extern NSString * const CLMUserAccountLoginNotification;
+extern NSString * const CLMUserAccountLogoutNotification;

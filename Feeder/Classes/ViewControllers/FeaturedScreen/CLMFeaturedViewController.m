@@ -8,8 +8,10 @@
 
 #import "CLMFeaturedViewController.h"
 
-@interface CLMFeaturedViewController ()
+@interface CLMFeaturedViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) NSMutableArray *feedArticles;
+@property (nonatomic, strong) IBOutlet UITableView *articleTableView;
 @end
 
 @implementation CLMFeaturedViewController

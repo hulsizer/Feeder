@@ -10,4 +10,8 @@
 
 @interface CLMDataManager : NSObject
 
++ (instancetype)sharedManager;
+
+//Fetch Requests
+- (void)fetchUserData;
 @end

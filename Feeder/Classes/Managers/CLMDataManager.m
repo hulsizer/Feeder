@@ -8,6 +8,26 @@
 
 #import "CLMDataManager.h"
 
+static CLMDataManager *sharedManager;
+
 @implementation CLMDataManager
 
+
++ (instancetype)sharedManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!sharedManager)
+        {
+            sharedManager = [[CLMDataManager alloc] init];
+        }
+    });
+    
+    return sharedManager;
+}
+
+- (void)fetchUserData
+{
+    
+}
 @end

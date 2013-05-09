@@ -13,8 +13,9 @@
 #import "CLMConstants.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
-
 #import <QuartzCore/QuartzCore.h>
+#import "CLMUserManager.h"
+
 @interface CLMLoginViewController ()
 
 @property (nonatomic, strong) IBOutlet UILabel *selectLabel;
@@ -242,93 +243,15 @@
     return animation;
 }
 
-#pragma mark - OAuthLogin
-
+#pragma mark - Login
 - (IBAction)facebookLogin:(id)sender
 {
-    [self getTwitter];
-    [self getFacebook];
-//    self.loginWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-//    [self.view addSubview:self.loginWebView];
-//    self.client = [CLMOAuthClient clientWithBaseURL:[NSURL URLWithString:@"https://accounts.google.com/"] clientID:GoogleClientID clientSecret:GoogleClientSecret redirectURL:[NSURL URLWithString:@"http://feeder.com/oauth"]];
-//    [self.client requestAuthorizationInWebView:self.loginWebView];
+    [[CLMUserManager sharedManager] login:FacebookAccount];
 }
 
-- (void)getTwitter
+- (IBAction)twitterLogin:(id)sender
 {
-    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
-    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    
-    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
-        if(granted) {
-            NSArray *accountsArray = [accountStore accountsWithAccountType:accountType];
-            
-            if ([accountsArray count] > 0) {
-                ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
-                NSLog(@"%@",twitterAccount.username);
-                NSLog(@"%@",twitterAccount.identifier);
-                
-                [self twitterMe:twitterAccount];
-            }
-        }
-    }];
+    [[CLMUserManager sharedManager] login:TwitterAccount];
 }
 
-- (void)getFacebook
-{
-    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
-    ACAccountType *facebookTypeAccount = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
-    
-    [accountStore requestAccessToAccountsWithType:facebookTypeAccount
-                                           options:@{ACFacebookAppIdKey: FacebookClientID, ACFacebookPermissionsKey: @[@"email"]}
-                                        completion:^(BOOL granted, NSError *error) {
-                                            if(granted){
-                                                NSArray *accounts = [accountStore accountsWithAccountType:facebookTypeAccount];
-                                                ACAccount *facebookAccount = [accounts lastObject];
-                                                NSLog(@"Success");
-                                                NSLog(@"%@",facebookAccount.identifier);
-                                                [self me:facebookAccount];
-                                            }else{
-                                                // ouch
-                                                NSLog(@"Fail");
-                                                NSLog(@"Error: %@", error);
-                                            }
-                                        }];
-}
-
-- (void)me:(ACAccount *)account{
-    NSURL *meurl = [NSURL URLWithString:@"https://graph.facebook.com/me"];
-    
-    SLRequest *merequest = [SLRequest requestForServiceType:SLServiceTypeFacebook
-                                              requestMethod:SLRequestMethodGET
-                                                        URL:meurl
-                                                 parameters:nil];
-    
-    merequest.account = account;
-    
-    [merequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-        NSString *meDataString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-        
-        NSLog(@"%@", meDataString);
-        
-    }];
-    
-}
-
-- (void)twitterMe:(ACAccount *)account{
-    NSURL *meurl = [NSURL URLWithString:[@"https://api.twitter.com/1/users/show.json?screen_name=" stringByAppendingString:account.username]];
-    
-    SLRequest *merequest = [SLRequest requestForServiceType:SLServiceTypeTwitter
-                                              requestMethod:SLRequestMethodGET
-                                                        URL:meurl
-                                                 parameters:nil];
-    
-    [merequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-        NSString *meDataString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-        
-        NSLog(@"%@", meDataString);
-        
-    }];
-    
-}
 @end

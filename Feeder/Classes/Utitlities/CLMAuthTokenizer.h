@@ -10,4 +10,10 @@
 
 @interface CLMAuthTokenizer : NSObject
 
+- (NSString *)userIDHash:(NSString *)userID;
+
+- (NSURL *)tokenizeStringToURL:(NSString *)string;
+- (NSURL *)tokenizeURLToURL:(NSURL *)url;
+- (NSString *)tokenizeStringToString:(NSString *)string;
+- (NSString *)tokenizeURLToString:(NSURL *)url;
 @end
