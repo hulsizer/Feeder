@@ -62,14 +62,16 @@
 
 - (void)handleLogin:(NSNotification *)notification
 {
-    //[self.view insertSubview:self.featuredViewController.view atIndex:0];
+    [self.view insertSubview:self.featuredViewController.view atIndex:0];
+    [self.loginViewController willMoveToParentViewController:nil];
+    [self.loginViewController removeFromParentViewController];
     [self.loginViewController.view removeFromSuperview];
-    [self.loginViewController.view setAlpha:0.0];
-    //[self.loginViewController removeFromParentViewController];
 }
 
 - (void)handleLogout:(NSNotification *)notification
 {
-    [self.view addSubview:self.loginViewController.view];    
+    [self addChildViewController:self.loginViewController];
+    [self.view addSubview:self.loginViewController.view];
+    [self.loginViewController didMoveToParentViewController:self];
 }
 @end

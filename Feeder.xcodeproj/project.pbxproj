@@ -12,6 +12,7 @@
 		52990DFF1724853D00285E42 /* AFOAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 52990DFE1724853D00285E42 /* AFOAuth2Client.m */; };
 		52AAD213171EF79B00947FB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AAD212171EF79B00947FB0 /* QuartzCore.framework */; };
 		52AAD215171F016C00947FB0 /* FeederTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AAD214171F016B00947FB0 /* FeederTest.png */; };
+		AF916075174C71F500CCAF64 /* libCLMFeedling.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF916074174C71F500CCAF64 /* libCLMFeedling.a */; };
 		AFB1B1721739F3B200F28824 /* CLMUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB1B1711739F3B200F28824 /* CLMUserManager.m */; };
 		AFB1B1781739FF3200F28824 /* CLMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB1B1771739FF3200F28824 /* CLMUser.m */; };
 		AFB1B17B1739FF7300F28824 /* CLMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB1B17A1739FF7300F28824 /* CLMDataManager.m */; };
@@ -84,6 +85,14 @@
 		52990DFE1724853D00285E42 /* AFOAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth2Client.m; sourceTree = "<group>"; };
 		52AAD212171EF79B00947FB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52AAD214171F016B00947FB0 /* FeederTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeederTest.png; sourceTree = "<group>"; };
+		AF91606C174C70DD00CCAF64 /* CLMAtomParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMAtomParser.h; sourceTree = "<group>"; };
+		AF91606D174C70DD00CCAF64 /* CLMFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMFeed.h; sourceTree = "<group>"; };
+		AF91606E174C70DD00CCAF64 /* CLMFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMFeedItem.h; sourceTree = "<group>"; };
+		AF91606F174C70DD00CCAF64 /* CLMFeedling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMFeedling.h; sourceTree = "<group>"; };
+		AF916070174C70DD00CCAF64 /* CLMFeedlingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMFeedlingManager.h; sourceTree = "<group>"; };
+		AF916071174C70DD00CCAF64 /* CLMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMParser.h; sourceTree = "<group>"; };
+		AF916072174C70DD00CCAF64 /* CLMXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMXMLParser.h; sourceTree = "<group>"; };
+		AF916074174C71F500CCAF64 /* libCLMFeedling.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCLMFeedling.a; sourceTree = "<group>"; };
 		AFB1B1701739F3B200F28824 /* CLMUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMUserManager.h; sourceTree = "<group>"; };
 		AFB1B1711739F3B200F28824 /* CLMUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMUserManager.m; sourceTree = "<group>"; };
 		AFB1B1761739FF3200F28824 /* CLMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMUser.h; sourceTree = "<group>"; };
@@ -192,6 +201,7 @@
 				AFB444D6171AEE2700E9A270 /* UIKit.framework in Frameworks */,
 				AFB444D8171AEE2700E9A270 /* Foundation.framework in Frameworks */,
 				AFB444DA171AEE2700E9A270 /* CoreGraphics.framework in Frameworks */,
+				AF916075174C71F500CCAF64 /* libCLMFeedling.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +264,38 @@
 				52990DFE1724853D00285E42 /* AFOAuth2Client.m */,
 			);
 			path = AFOAuth2Client;
+			sourceTree = "<group>";
+		};
+		AF91605E174C704B00CCAF64 /* CLMFeedling */ = {
+			isa = PBXGroup;
+			children = (
+				AF91606A174C70DD00CCAF64 /* include */,
+			);
+			path = CLMFeedling;
+			sourceTree = "<group>";
+		};
+		AF91606A174C70DD00CCAF64 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AF916074174C71F500CCAF64 /* libCLMFeedling.a */,
+				AF91606B174C70DD00CCAF64 /* CLMFeedling */,
+			);
+			name = include;
+			path = "../../../../../../../../Library/Developer/Xcode/DerivedData/CLMFeedling-ejsbdatqbsygcxafgjbmdrhpdgsu/Build/Products/Debug-iphoneos/include";
+			sourceTree = "<group>";
+		};
+		AF91606B174C70DD00CCAF64 /* CLMFeedling */ = {
+			isa = PBXGroup;
+			children = (
+				AF91606C174C70DD00CCAF64 /* CLMAtomParser.h */,
+				AF91606D174C70DD00CCAF64 /* CLMFeed.h */,
+				AF91606E174C70DD00CCAF64 /* CLMFeedItem.h */,
+				AF91606F174C70DD00CCAF64 /* CLMFeedling.h */,
+				AF916070174C70DD00CCAF64 /* CLMFeedlingManager.h */,
+				AF916071174C70DD00CCAF64 /* CLMParser.h */,
+				AF916072174C70DD00CCAF64 /* CLMXMLParser.h */,
+			);
+			path = CLMFeedling;
 			sourceTree = "<group>";
 		};
 		AFB1B182173B467E00F28824 /* FeaturedScreen */ = {
@@ -372,6 +414,7 @@
 		AFD5F9D7171CDF570071A953 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AF91605E174C704B00CCAF64 /* CLMFeedling */,
 				AFF2C7CB171CEDC0004F1F5A /* GOAuth */,
 				AFD5F9D8171CDF570071A953 /* AFNetworking */,
 			);
@@ -756,6 +799,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Feeder/Feeder-Prefix.pch";
 				INFOPLIST_FILE = "Feeder/Feeder-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Feeder/Classes/Shared/CLMFeedling\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CLMFeedling-ejsbdatqbsygcxafgjbmdrhpdgsu/Build/Products/Debug-iphoneos/include\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -768,6 +816,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Feeder/Feeder-Prefix.pch";
 				INFOPLIST_FILE = "Feeder/Feeder-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Feeder/Classes/Shared/CLMFeedling\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CLMFeedling-ejsbdatqbsygcxafgjbmdrhpdgsu/Build/Products/Debug-iphoneos/include\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -7,7 +7,7 @@
 //
 
 #import "CLMFeaturedViewController.h"
-
+#import "CLMFeedlingManager.h"
 @interface CLMFeaturedViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *feedArticles;
@@ -21,6 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [[CLMFeedlingManager sharedFeedling] addFeed:@"http://kotaku.com/index.xml"];
     }
     return self;
 }

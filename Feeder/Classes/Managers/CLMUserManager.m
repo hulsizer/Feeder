@@ -103,7 +103,10 @@ typedef void (^accountCompletionBlock)(NSData *responseData, NSHTTPURLResponse *
         
         NSLog(@"Facebook: %@", [userInfo objectForKey:@"id"]);
         //[[CLMDataManager sharedManager] fetchUserData];
-        [[NSNotificationCenter defaultCenter] postNotificationName:CLMUserAccountLoginNotification object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:CLMUserAccountLoginNotification object:nil];
+        });
+        
     }];
 }
 
@@ -118,8 +121,10 @@ typedef void (^accountCompletionBlock)(NSData *responseData, NSHTTPURLResponse *
         
         NSLog(@"Twitter: %@", [userInfo objectForKey:@"id"]);
         //[[CLMDataManager sharedManager] fetchUserData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:CLMUserAccountLoginNotification object:nil];
+        });
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:CLMUserAccountLoginNotification object:nil];
     }];
 }
 
