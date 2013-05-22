@@ -26,8 +26,9 @@ static CLMDataManager *sharedManager;
     return sharedManager;
 }
 
-- (void)fetchUserData
+- (void)fetchUserDataWithSuccess:(dataSuccess)successBlock andFailure:(dataFailure)failureBlock
 {
-    
+    successBlock(nil, @[@"www.kotaku.com"]);
 }
+
 @end

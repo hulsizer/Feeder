@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^dataCompletion)(NSError *error,BOOL success, id data);
+typedef void (^dataSuccess)(NSError *error, id data);
+typedef void (^dataFailure)(NSError *error, id data);
+
 @interface CLMDataManager : NSObject
 
 + (instancetype)sharedManager;
 
 //Fetch Requests
-- (void)fetchUserData;
+- (void)fetchUserDataWithSuccess:(dataSuccess)successBlock andFailure:(dataFailure)failureBlock;
 @end
